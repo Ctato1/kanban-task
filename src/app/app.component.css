@@ -118,4 +118,7 @@
   .main {
     width: 100%;
   }
+  .show-sidebar{
+    display: none;
+  }
 }

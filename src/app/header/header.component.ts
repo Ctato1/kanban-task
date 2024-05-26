@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {BoardsService} from "../../shared/boards.service";
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent{
 
+  constructor(private boardsService:BoardsService) {
+  }
+  toggleSidebar(){
+    this.boardsService.toggleSidebar();
+  }
 
 }
