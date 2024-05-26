@@ -9,6 +9,7 @@ interface BoardsServiceProps{
 
 export class BoardsService {
   showBoard = new BehaviorSubject<boolean>(true);
+  route = new BehaviorSubject<string>("");
 
   boards:BoardsServiceProps[] = [
     {

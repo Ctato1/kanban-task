@@ -6,12 +6,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans", sans-serif;
+  transition: .2s ease-in-out;
 }
 
 :root {
   --header-bg: #FFF;
+  --secondary-bg:#E4EBFA;
   --main-bg: #635FC7;
-  --secondary-bg: #A8A4FF;
   --title-color:#000112;
   --paragraph-color:#828FA3;
   --btn-d:#635FC7;
@@ -19,8 +20,8 @@
 }
 [data-theme="dark"]{
   --header-bg: #2B2C37;
+  --secondary-bg: #20212C;
   --main-bg: #635FC7;
-  --secondary-bg: #A8A4FF;
   --title-color:#FFF;
   --paragraph-color:#828FA3;
   --btn-d:#635FC7;
