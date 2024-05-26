@@ -1,0 +1,121 @@
+.kanban {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  gap: 10px;
+  transition: .3s ease-in-out;
+}
+
+/* Hide scrollbar in Webkit browsers */
+.kanban::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 30%;
+  height: 100vh; /* Full height of the viewport */
+  background: var(--header-bg);
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* For Internet Explorer, Edge */
+  scrollbar-width: none; /* For Firefox */
+  min-height: 200px;
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.hide{
+  animation: hideSidebar .3s ease-in forwards;
+}
+.show{
+  animation: showSidebar .3s ease-in forwards;
+}
+@keyframes hideSidebar {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+@keyframes showSidebar {
+  0%{
+    transform: translateX(-100%);
+    display: block;
+  }
+  100%{
+    transform: translateX(0%);
+
+  }
+}
+.show-sidebar{
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+}
+
+/* Hide scrollbar in Webkit browsers */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar app-sidebar {
+  display: block;
+}
+
+/* Main content styles */
+.main {
+  width: 100%;
+  height: fit-content;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading styles */
+.main h2 {
+  color: #34495e;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width:40%;
+  }
+
+  .main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .kanban {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .main {
+    width: 100%;
+  }
+}

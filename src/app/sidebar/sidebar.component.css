@@ -1,0 +1,43 @@
+nav {
+  padding-right: 15px;
+  color: var(--title-color);
+}
+
+nav h5 {
+  padding-top: 30px;
+}
+
+ul {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: .7rem;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+li{
+  background: var(--main-bg);
+}
+li svg{
+  margin-right: 10px;
+}
+ul li:last-child {
+  color: var(--main-bg);
+}
+
+@media screen and (min-width: 375px) {
+  /*li {*/
+  /*  font-size: 1.2rem;*/
+  /*  cursor: pointer;*/
+  /*}*/
+}
