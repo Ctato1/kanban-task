@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { KanbanComponent } from './kanban/kanban.component';
 import { NameComponent } from './kanban/name/name.component';
+import { CreateBoardComponent } from './shared/create-board/create-board.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NameComponent } from './kanban/name/name.component';
     HeaderComponent,
     SidebarComponent,
     KanbanComponent,
-    NameComponent
+    NameComponent,
+    CreateBoardComponent
   ],
   imports: [
     BrowserModule,

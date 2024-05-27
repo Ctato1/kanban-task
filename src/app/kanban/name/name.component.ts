@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Route} from "@angular/router";
-import {BoardsService} from "../../../shared/boards.service";
+import {BoardsService} from "../../shared/boards.service";
 
 @Component({
   selector: 'app-name',

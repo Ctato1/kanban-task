@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BoardsService} from "../shared/boards.service";
+import {BoardsService} from "./shared/boards.service";
 
 @Component({
   selector: 'app-root',

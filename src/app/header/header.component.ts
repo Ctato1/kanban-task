@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BoardsService} from "../../shared/boards.service";
+import {BoardsService} from "../shared/boards.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
