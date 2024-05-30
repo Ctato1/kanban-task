@@ -1,3 +1,64 @@
-<div>
-  <h1>{{currentBoard?.name}}</h1>
+<!--<div>-->
+<!--  <h1>{{ currentBoard?.name }}</h1>-->
+<!--</div>-->
+
+
+<!--<div cdkDropListGroup class="main">-->
+<!--  <div class="example-container">-->
+<!--    <div class="type-names">-->
+<!--      <div *ngFor="let type of allTypes">-->
+<!--        {{ type }}-->
+<!--        <div *ngFor="let item of allItems;let i = index">-->
+<!--          <div *ngIf="item.type === type">-->
+<!--            <div-->
+<!--              cdkDropList-->
+<!--              [cdkDropListData]="item.type"-->
+<!--              class="example-list"-->
+<!--              (cdkDropListDropped)="drop($event)">-->
+<!--              @for (item of item[i]; track item) {-->
+<!--                <div class="example-box" cdkDrag>{{ item }}</div>-->
+<!--              }-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--&lt;!&ndash;    <div&ndash;&gt;-->
+<!--&lt;!&ndash;      cdkDropList&ndash;&gt;-->
+<!--&lt;!&ndash;      [cdkDropListData]="todo"&ndash;&gt;-->
+<!--&lt;!&ndash;      class="example-list"&ndash;&gt;-->
+<!--&lt;!&ndash;      (cdkDropListDropped)="drop($event)">&ndash;&gt;-->
+<!--&lt;!&ndash;      @for (item of todo; track item) {&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="example-box" cdkDrag>{{ item.name }}</div>&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--  </div>-->
+
+
+<!--</div>-->
+<div cdkDropListGroup class="main">
+  <div class="example-container">
+    <div class="type-names">
+      <div *ngFor="let type of allTypes">
+        <h3>{{ type }}</h3>
+        <div
+          cdkDropList
+          [cdkDropListData]="getItemsByType(type)"
+          class="example-list"
+          (cdkDropListDropped)="drop($event, type)"
+        >
+          <div
+            *ngFor="let item of getItemsByType(type); trackBy: trackById"
+            cdkDrag>
+            <div class="box-container">{{ item.name }}</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+

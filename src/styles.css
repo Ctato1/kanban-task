@@ -6,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans", sans-serif;
-  transition: .2s ease-in-out;
+  /*transition: .2s ease-in-out;*/
 }
 
 :root {
@@ -26,4 +26,8 @@
   --paragraph-color:#828FA3;
   --btn-d:#635FC7;
   --btn-e:#635FC7;
+}
+
+body{
+  background: var(--secondary-bg) !important;
 }
