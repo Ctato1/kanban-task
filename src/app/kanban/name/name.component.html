@@ -2,7 +2,7 @@
   <div class="example-container">
     <div class="type-names">
       <div *ngFor="let type of allTypes">
-        <h3>{{ type }} ({{getItemsByType(type).length}})</h3>
+        <h3><div></div> {{ type | uppercase}} ({{getItemsByType(type).length}})</h3>
         <div
           cdkDropList
           [cdkDropListData]="getItemsByType(type)"

@@ -24,10 +24,10 @@
   position: sticky;
   top: 0;
 }
-.hide{
+.sidebar.hide{
   animation: hideSidebar .3s ease-in forwards;
 }
-.show{
+.sidebar.show{
   animation: showSidebar .3s ease-in forwards;
 }
 @keyframes hideSidebar {
@@ -89,9 +89,14 @@
   .sidebar {
     width:40%;
   }
-
-  .main {
+  .sidebar.hide ~ .main {
+    width: 100%;
+  }
+  .sidebar.show ~ .main {
     width: 60%;
+  }
+  .main{
+    width: 100%;
   }
 }
 
@@ -115,11 +120,11 @@
     width: 100%;
     height: auto;
     position: static;
-    border-right: 0px solid transparent;
+    border-right: 0 solid transparent;
   }
 
   .main {
-    width: 100%;
+    width: 100% !important;
   }
   .show-sidebar{
     display: none;

@@ -42,7 +42,7 @@
 }
 .type-names{
   display: flex;
-  /*align-items: center;*/
+  padding-bottom: 50px;
   gap: 40px;
 }
 .example-list{
@@ -57,13 +57,22 @@
 .example-list::-webkit-scrollbar {
   display: none;
 }
-/*.main{*/
-/*  position: relative;*/
-/*}*/
-/*h3{*/
-/*  position: absolute;*/
-/*  top: 20px;*/
-/*}*/
+
+.type-names h3{
+  color: var(--paragraph-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.type-names h3 div{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--main-bg);
+}
 .box-container{
   width: 100%;
   padding: 23px 16px;
