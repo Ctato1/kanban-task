@@ -13,7 +13,6 @@
 /* Sidebar styles */
 .sidebar {
   width: 30%;
-  border-right: 1px solid var(--paragraph-color);
   height: 100vh; /* Full height of the viewport */
   background: var(--header-bg);
   box-sizing: border-box;
@@ -92,11 +91,11 @@
   }
 
   .main {
-    width: 100%;
+    width: 60%;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   header nav {
     flex-direction: column;
     align-items: flex-start;
