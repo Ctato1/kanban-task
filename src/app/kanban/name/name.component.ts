@@ -116,5 +116,10 @@ export class NameComponent implements OnInit {
   trackById(index: number, item: Items): number {
     return item.id;
   }
+
+  countUncheckedSubtasks(item: Items): number {
+    return item.subtasks?.filter(subtask => subtask.checked).length ?? 0;
+  }
+
 }
 

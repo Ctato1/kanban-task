@@ -436,7 +436,7 @@ export class BoardsService {
             " Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.",
           subtasks:[
             {
-              checked:true,
+              checked:false,
               name:"Research competitor pricing and business models",
             },
             {
