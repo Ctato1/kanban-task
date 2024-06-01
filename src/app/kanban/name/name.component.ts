@@ -82,12 +82,13 @@ export class NameComponent implements OnInit {
       this.allTypes = this.boardsService.allType(this.currentRoute);
       this.allItems = this.boardsService.getItems(this.currentRoute);
 
-      this.boardsService.currentBoard.subscribe((board: BoardsServiceProps) => {
-        if (board.name === this.currentRoute) {
-          this.currentBoard = board;
-          this.allItems = board.items;
-        }
-      });
+
+    });
+    this.boardsService.currentBoard.subscribe((board: BoardsServiceProps) => {
+      if (board.name === this.currentRoute) {
+        this.currentBoard = board;
+        this.allItems = board.items;
+      }
     });
   }
 

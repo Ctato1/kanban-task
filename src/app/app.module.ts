@@ -10,6 +10,7 @@ import { KanbanComponent } from './kanban/kanban.component';
 import { NameComponent } from './kanban/name/name.component';
 import { CreateBoardComponent } from './shared/create-board/create-board.component';
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 
@@ -21,11 +22,12 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
     KanbanComponent,
     NameComponent,
     CreateBoardComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
