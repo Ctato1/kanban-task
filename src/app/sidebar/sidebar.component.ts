@@ -20,10 +20,12 @@ export class SidebarComponent implements OnInit {
     this.boardsService.route.subscribe(name=>{
       this.currentBoard = name;
     })
+    this.boardsService.currentBoard.subscribe(name=>{
+      this.boards = this.boardsService.getAllName();
+    })
   }
   navigateRouter(name:string){
       this.router.navigate([`kanban/${name}`])
-      // this.boardsService.route.next(name);
   }
   toggleTheme(){
    this.isDark = !this.isDark;

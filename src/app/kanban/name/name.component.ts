@@ -84,12 +84,12 @@ export class NameComponent implements OnInit {
 
 
     });
-    this.boardsService.currentBoard.subscribe((board: BoardsServiceProps) => {
-      if (board.name === this.currentRoute) {
-        this.currentBoard = board;
-        this.allItems = board.items;
-      }
-    });
+    // this.boardsService.currentBoard.subscribe((board: BoardsServiceProps) => {
+    //   if (board.name === this.currentRoute) {
+    //     this.currentBoard = board;
+    //     this.allItems = board.items;
+    //   }
+    // });
   }
 
   getItemsByType(type: string): Items[] {

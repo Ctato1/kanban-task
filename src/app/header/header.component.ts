@@ -20,5 +20,8 @@ export class HeaderComponent implements OnInit{
       this.kanbanName = name;
     })
   }
+  onDeleteBoard(){
+    this.boardsService.deleteBoardByName(this.kanbanName)
+  }
 
 }
