@@ -60,35 +60,38 @@ ul .add-btn {
 ul svg {
   cursor: pointer;
 }
+/*toggle dropdown*/
 .control .control-tasks {
   display: none;
 }
 
 .control.open .control-tasks {
-  display: flex !important;
+  display: block !important;
 }
-
+.control{
+  position: relative;
+}
 .control-tasks{
-  display: none !important;
   flex-direction: column;
   align-items: start !important;
-  justify-content: center;
+  justify-content: space-between;
   width: 132px;
   height: fit-content;
   border-radius: 8px;
   box-shadow: 0px 10px 20px 0px rgba(54, 78, 126, 0.25);
   padding: 0;
-
+  margin: 0 !important;
   background: #fff;
   position: absolute;
   z-index: 1;
-  top: 80px;
-  right: 10px;
+  top: 50px;
+  right: 0px;
 }
 .control-tasks.open{
   display: flex !important;
 }
 .control-tasks li{
+  border-radius: 8px;
   padding: 10px;
   width: 100%;
   cursor: pointer;
