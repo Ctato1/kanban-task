@@ -375,7 +375,7 @@ export class BoardsService {
     // change board
     this.currentBoard.next(changedBoard);
     //change name of route
-    this.route.next("Kanban");
+    this.route.next("kanban");
     // navigate starting point
     this.router.navigate(['kanban']);
     console.log(this.boards)

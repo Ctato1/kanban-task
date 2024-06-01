@@ -1,3 +1,6 @@
+
+<app-delete-alert *ngIf="deleteAlert" [message]="deleteMessage" [boardName]="kanbanName" (close)="onHandleError()"></app-delete-alert>
+
 <header>
   <svg xmlns="http://www.w3.org/2000/svg" width="153" height="26" viewBox="0 0 153 26" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -19,7 +22,7 @@
       <button>+ Add New Task</button>
       <button class="add-btn">+</button>
 
-      <li class="control" appDropdown>
+      <li class="control" appDropdown *ngIf="kanbanName !== 'kanban' && kanbanName !== ''">
         <svg xmlns="http://www.w3.org/2000/svg" width="5" height="20" viewBox="0 0 5 20" fill="none" >
           <circle cx="2.30769" cy="2.30769" r="2.30769" fill="#828FA3"/>
           <circle cx="2.30769" cy="10" r="2.30769" fill="#828FA3"/>
@@ -27,7 +30,7 @@
         </svg>
         <ul class="control-tasks">
           <li>Edit Board</li>
-          <li (click)="onDeleteBoard()">Delete Board</li>
+          <li (click)="onHandleError()">Delete Board</li>
         </ul>
       </li>
 

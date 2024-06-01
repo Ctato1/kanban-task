@@ -11,6 +11,7 @@ import { NameComponent } from './kanban/name/name.component';
 import { CreateBoardComponent } from './shared/create-board/create-board.component';
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import { DropdownDirective } from './shared/dropdown.directive';
+import { DeleteAlertComponent } from './shared/delete-alert/delete-alert.component';
 
 
 
@@ -23,6 +24,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     NameComponent,
     CreateBoardComponent,
     DropdownDirective,
+    DeleteAlertComponent,
   ],
   imports: [
     BrowserModule,
