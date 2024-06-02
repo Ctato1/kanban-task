@@ -1,5 +1,6 @@
 
 <app-delete-alert *ngIf="deleteAlert" [message]="deleteMessage" [boardName]="kanbanName" (close)="onHandleError()"></app-delete-alert>
+<app-edit-board  *ngIf="editBoard" [message]="deleteMessage" [boardInfo]="currentBoard" (close)="onEditBoard()"></app-edit-board>
 
 <header>
   <svg xmlns="http://www.w3.org/2000/svg" width="153" height="26" viewBox="0 0 153 26" fill="none">
@@ -29,7 +30,7 @@
           <circle cx="2.30769" cy="17.6923" r="2.30769" fill="#828FA3"/>
         </svg>
         <ul class="control-tasks">
-          <li>Edit Board</li>
+          <li (click)="onEditBoard()">Edit Board</li>
           <li (click)="onHandleError()">Delete Board</li>
         </ul>
       </li>

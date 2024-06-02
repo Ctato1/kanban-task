@@ -54,10 +54,10 @@
 //   }
 // }
 
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { BoardsService, BoardsServiceProps, Items } from '../../shared/boards.service';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router';
+import {BoardsService, BoardsServiceProps, Items} from '../../shared/boards.service';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-name',
@@ -66,12 +66,12 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class NameComponent implements OnInit {
   currentRoute!: string;
-  currentBoard?: BoardsServiceProps;
 
   allItems: Items[] = [];
   allTypes!: string[];
 
-  constructor(private boardsService: BoardsService, private route: ActivatedRoute) {}
+  constructor(private boardsService: BoardsService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
@@ -82,14 +82,12 @@ export class NameComponent implements OnInit {
       this.allTypes = this.boardsService.allType(this.currentRoute);
       this.allItems = this.boardsService.getItems(this.currentRoute);
 
-
     });
-    // this.boardsService.currentBoard.subscribe((board: BoardsServiceProps) => {
-    //   if (board.name === this.currentRoute) {
-    //     this.currentBoard = board;
-    //     this.allItems = board.items;
-    //   }
-    // });
+    this.boardsService.currentBoard.subscribe((item: any) => {
+      this.allTypes = this.boardsService.allType(this.currentRoute);
+      this.allItems = this.boardsService.getItems(this.currentRoute);
+    })
+
   }
 
   getItemsByType(type: string): Items[] {

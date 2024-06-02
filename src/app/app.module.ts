@@ -12,6 +12,8 @@ import { CreateBoardComponent } from './shared/create-board/create-board.compone
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import { DropdownDirective } from './shared/dropdown.directive';
 import { DeleteAlertComponent } from './shared/delete-alert/delete-alert.component';
+import { EditBoardComponent } from './shared/edit-board/edit-board.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -25,9 +27,11 @@ import { DeleteAlertComponent } from './shared/delete-alert/delete-alert.compone
     CreateBoardComponent,
     DropdownDirective,
     DeleteAlertComponent,
+    EditBoardComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     DragDropModule,
   ],

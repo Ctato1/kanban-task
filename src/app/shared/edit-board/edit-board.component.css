@@ -1,0 +1,75 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+}
+.alert-box{
+  border-radius: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+.alert-box::-webkit-scrollbar {
+  display: none;
+}
+.alert-box h5{
+  color: #EA5555;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.alert-box p{
+  color: var(--paragraph-color);
+  font-size:.8rem;
+  font-weight: 500;
+  line-height: 23px;
+}
+.alert-box-buttons{
+  width: 100%;
+}
+.alert-box-buttons button{
+  border: none;
+  border-radius: 20px;
+  background:#FF9898;
+  width: 40%;
+  font-weight: 700;
+  transition: .3s ease-in-out;
+}
+.alert-box-buttons button:first-child{
+  background: #EA5555;
+  color: #fff;
+}
+.alert-box-buttons button:first-child:hover{
+  background: #FF9898;
+  color: #fff;
+}
+.alert-box-buttons button:last-child{
+  background: rgba(99, 95, 199, 0.10);
+  color: #635FC7;
+}
+.alert-box-buttons button:last-child:hover{
+  background: rgba(99, 95, 199, 0.25);
+}
+@media screen and (min-width:376px){
+  .alert-box{
+    width: 50vw;
+    height: 170px;
+  }
+}
+@media screen and (min-width:769px){
+  .alert-box{
+    width: 400px;
+    height: fit-content;
+  }
+}
