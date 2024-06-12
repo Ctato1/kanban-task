@@ -393,12 +393,10 @@ export class BoardsService {
     return this.boards.filter(item => item.id === id);
   }
 
-  changeBoard(id: number, newBoard: any) {
+  changeBoard(id: number,newBoard: any) {
     let changedBoard = this.boards.filter(item => item.id !== id)[0] = newBoard
-    console.log(changedBoard)
     this.currentBoard.next(Array.from(changedBoard));
-    // this.boards = x.slice();
-    // this.currentBoard.next(this.boards);
+    console.log(this.boards)
   }
 
 
