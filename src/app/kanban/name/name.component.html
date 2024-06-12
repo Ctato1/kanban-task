@@ -2,7 +2,10 @@
   <div class="example-container">
     <div class="type-names">
       <div *ngFor="let type of allTypes">
-        <h3><div></div> {{ type | uppercase}} ({{getItemsByType(type).length}})</h3>
+        <h3>
+          <div></div>
+          {{ type | uppercase }} ({{ getItemsByType(type).length }})
+        </h3>
         <div
           cdkDropList
           [cdkDropListData]="getItemsByType(type)"
@@ -13,12 +16,16 @@
             *ngFor="let item of getItemsByType(type); trackBy: trackById"
             cdkDrag
             class="box-container">
-            <h5 >{{ item.name }}</h5>
+            <h5>{{ item.name }}</h5>
             <p>{{ countUncheckedSubtasks(item) }} of {{ item.subtasks?.length }} substasks</p>
           </div>
         </div>
       </div>
+
     </div>
+<!--    <div class="new-column">-->
+<!--      <h3>+ New Column</h3>-->
+<!--    </div>-->
   </div>
 </div>
 
